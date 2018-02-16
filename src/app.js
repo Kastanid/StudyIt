@@ -1,6 +1,6 @@
 export class App {
   constructor() {
-    this.message = 'Kastnid!';
+    this.message = 'Kastanid!';
 
     this.styleString = `color: gray;
     background-color: rgb(40,40,40);
