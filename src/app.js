@@ -4,7 +4,7 @@ export class App {
 
     this.styleString = `color: gray;
     background-color: rgb(30,40,40);
-    width: 100%;
+    width: 110%;
     height: 60px;
     `;
   }
