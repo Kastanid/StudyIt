@@ -1,11 +1,13 @@
 export class App {
-  constructor() {
-    this.message = 'Kastanid!';
-
-    this.styleString = `color: gray;
-    background-color: rgb(35,40,40);
-    width: 110%;
-    height: 60px;
-    `;
+  configureRouter(config, router){
+    config.title = 'StudyIt';
+    config.map([
+      { route: '',              moduleId: 'mainPage',   title: 'Main'},
+      { route: '/mainPage',      moduleId: 'mainPage', name:'mainPage' },
+      { route: '/kkk',           moduleId: 'kkk', name:'kkk' },
+      { route: '/kontaktid',     moduleId: 'kontaktid', name:'kontaktid' },
+      { route: '/arvustuseVorm', moduleId: 'arvustuseVorm', name:'arvustuseVorm' }
+    ]);
+    this.router = router;
   }
 }

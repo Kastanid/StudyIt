@@ -1,0 +1,34 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="./style.css"></require>
+
+  <div class="contentBody">
+    <div class="grid-container">
+      <div class="grid-item" id="aine">Tarkvaratehnika IDK0071 (Martin Rebane)</div>
+      <div class="grid-item">Teadmiste kontroll:
+        <input type="text" placeholder="Kuidas kujunes lõpphinne" id="box">
+      </div>
+      <br>
+      <div class="grid-item">Minu tulemus:
+        <input type="radio" name="score" value="MA"> MA
+        <input type="radio" name="score" value="1"> 1
+        <input type="radio" name="score" value="2"> 2
+        <input type="radio" name="score" value="3"> 3
+        <input type="radio" name="score" value="4"> 4
+        <input type="radio" name="score" value="5"> 5
+        <input type="radio" name="score" value="A"> A
+      </div>
+      <br>
+      <div class="grid-item">Läbitavus:
+        <input type="text" placeholder="Kuidas hindad aine raskust" id="rating">
+      </div>
+      <br>
+      <div class="grid-item">
+        <input type="text" id="reviewBox">
+      </div>
+      <div class="grid-item">
+        <input type="submit" value="SALVESTA" class="btn btn-default btn-lg" id="save"><br>
+      </div>
+    </div>
+  </div>
+</template>
