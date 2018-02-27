@@ -1,7 +1,26 @@
 <template>
-  <body>
-    <div style.bind="styleString">
-      <h1>${message}</h1>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="./style.css"></require>
+  <body >
+  <div class="container-fluid">
+    <div class="head">
+      <h1>Arvustused</h1>
     </div>
+    <nav class="navbar navbar-static-top">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li><a route-href="route: mainPage">Pealeht</a></li>
+          <li><a route-href="route: kkk">KKK</a></li>
+          <li><a route-href="route: kontaktid">Kontakt</a></li>
+          <li><a route-href="route: arvustuseVorm">Arvustuse vorm</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registreeru</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logi sisse</a></li>
+        </ul>
+      </div>
+    </nav>
+    <router-view></router-view>
+  </div>
   </body>
 </template>

@@ -1,0 +1,173 @@
+body, html {
+    background-color: #f9f8e5;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+input[type="text"]{
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+}
+
+.navbar{
+    background-color: #ac2832;
+    padding-right:15px;
+}
+
+.navbar a{
+    font-size: 22px;
+    padding: 14px 24px;
+}
+
+.navbar .navbar-nav > li > a:hover {
+    background-color: #b43d46;
+}
+
+.navbar .navbar-nav > li > a:focus {
+    background-color: #ac2832;
+}
+
+.navbar .navbar-nav > li > a {
+    color: whitesmoke;
+	  font-family: 'Open Sans', sans-serif;
+}
+
+.glyphicon{
+	font-size: 15px;
+}
+
+.head{
+    background-image: url(/src/resources/images/taust.jpg);
+    color: black;
+    height: 110px;
+    font-weight: bold;
+    display:flex; 
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.head h1{
+    font-size: 48px;
+    border-bottom: 1px solid black; 
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.collapsible {
+    width: 440px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 8px;
+    border: none;
+    font-size: 25px;
+}
+
+.collapsible:hover {
+    background-color: white;
+}
+
+.collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 14px;
+    float: right;
+    margin-left: 5px;
+}
+
+.grid-container{
+    display: inline-grid;
+    text-align: left;
+    padding: 20px 30px;
+    font-size: 20px;
+}
+
+.contentBody {
+	text-align: center;
+}
+
+#mainText{
+    margin: 30px 16px;
+    font-size: 44px;
+}
+
+#insertSubjectText{
+    padding: 10px;
+    font-size: 29px;
+}
+
+#sloganText{
+    font-size: 26px;
+}
+
+#button{
+    color: white;
+    background-color: #52658F;
+    margin: 5px;
+    width: 250px;
+    margin-top: 15px;
+}
+
+#searching{
+    width: 480px;
+    height: 40px;
+    align-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#button:hover{
+    background-color: #4988ed;
+}
+
+#box {
+    width: 600px;
+    border: solid black 1px;
+    text-align: left;
+}
+
+#reviewBox {
+    width: 700px;
+    height: 200px;
+    text-align: left;
+    columns: 80;
+}
+
+#save{
+    color: white;
+    background-color: #52658F;
+    margin: 5px;
+    width: 250px;
+    margin-top: 15px;
+}
+
+#save:hover{
+    background-color: #4988ed;
+}
+
+#rating{
+    width: 600px;
+    border: solid black 1px;
+    text-align:left;
+}
+
+#aine{
+    font-family: bold;
+    font-size: 38px;
+    text-align: left;
+    border-bottom: black solid 1px;
+    margin-bottom: 20px;
+}
