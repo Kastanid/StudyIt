@@ -1,0 +1,13 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="./style.css"></require>
+  <div class="contentBody">
+    <h1 id="mainText">Otsi enda õppeaine kohta arvustusi!</h1>
+    <form submit.delegate="searchSubject()">
+      <p id="insertSubjectText">Sisesta soovitud õppeaine nimi või kood: </p>
+      <input type="text" required="required" autocomplete="off" id="searching" value.bind="subjectData.name"><br>
+      <input type="submit" value="OTSI" class="btn btn-default btn-lg" id="button"><br><br>
+    </form>
+    <p id="sloganText">Semestri algus? Vaja koostada õppekava?</p>
+  </div>
+</template>
