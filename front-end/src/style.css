@@ -6,6 +6,10 @@ body, html {
 
 }
 
+ul {
+   list-style-type: none;
+}
+
 .container-fluid {
     padding-right: 0px;
     padding-left: 0px;
@@ -98,6 +102,12 @@ input[type="text"]{
 
 .contentBody {
 	text-align: center;
+}
+
+.arvustus {
+  background-color: #ff9999;
+  min-height: 50px;
+  margin: 20px 100px;
 }
 
 #mainText{
