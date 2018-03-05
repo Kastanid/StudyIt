@@ -2,9 +2,10 @@
   <require from="bootstrap/css/bootstrap.css"></require>
   <require from="./style.css"></require>
   <ul >
-    <li repeat.for="todo of reviews">
+    <li repeat.for="review of reviews">
       <div class="arvustus">
-
+        <div class="arvustusePais"><h3>${review.title}</h3></div>
+        <div class="arvustuseTekst">${review.content}</div>
       </div>
     </li>
   </ul>
