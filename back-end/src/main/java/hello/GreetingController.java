@@ -15,7 +15,7 @@ public class GreetingController {
 
     @CrossOrigin(origins = "http://localhost:9000")
     @RequestMapping("/greeting")
-    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
+    public Greeting greeting(@RequestParam(value="name", defaultValue="Maailm") String name) {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
     }
