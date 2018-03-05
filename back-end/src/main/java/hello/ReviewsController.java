@@ -8,13 +8,15 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ReviewController {
-
-    private static final String template = "Hello, %s!";
+public class ReviewsController {
 
     @CrossOrigin(origins = "http://localhost:9000")
-    @RequestMapping("/review")
-    public Review review(@RequestParam(value="name", defaultValue="World") String name) {
-        return new Review("Tarkvaratehnika", String.format(template, name));
+    @RequestMapping("/reviews")
+    public Reviews reviews() {
+        Reviews rev = new Reviews();
+        rev.addReview(new Review("Tarkvaratehnika", "Jube Palju teha"));
+        rev.addReview(new Review("Diskmat", "Jube"));
+        rev.addReview(new Review("Süteemianalüüs", "Mjda?"));
+        return rev;
     }
 }
