@@ -1,13 +1,8 @@
-export class mainPage {
-  constrictor(){
-  }
-}
 import {HttpClient, json} from 'aurelia-fetch-client';
 import {Arvustus} from './arvustus';
 
-export class arvustused {
-  reviews = [];
-  constructor(){
+export class mainPage {
+  constrictor(){
 
   }
   searchbox(){
@@ -40,19 +35,13 @@ export class arvustused {
         console.log(this.reviews);
       });
 
-
-    console.log("otsing");
-
-
-  function searchInput() {
-      // Declare variables
+  /*function searchInput() {
       var input, filter, ul, li, arvustus, i;
       input = document.getElementById('searching');
       filter = input.value.toUpperCase();
       ul = document.getElementById("list");
       li = ul.getElementsByTagName('li');
 
-      // Loop through all list items, and hide those who don't match the search query
       for (i = 0; i < li.length; i++) {
           arvustus = li[i].getElementByClassName("arvustus")[0];
           if (arvustus.innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -61,6 +50,6 @@ export class arvustused {
               li[i].style.display = "none";
           }
       }
-  }
+  }*/
  }
 }
