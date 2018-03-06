@@ -5,7 +5,12 @@
     <h1 id="mainText">Otsi enda õppeaine kohta arvustusi!</h1>
     <form >
       <p id="insertSubjectText">Sisesta soovitud õppeaine nimi või kood: </p>
-      <input type="text" required="required" autocomplete="off" id="searching" ><br>
+      <input type="text" required="required" id="searching" list="datalist1"><br>
+      <datalist id="datalist1">
+        <option value="Diskmat">
+        <option value="Süsteemianalüüs">
+        <option value="Tarkvaratehnika">
+      </datalist>
       <a type="submit" class="btn btn-default btn-lg" id="button" route-href="route: arvustused">OTSI</a><br><br>
       <!--<input type="submit" value="OTSI" class="btn btn-default btn-lg" id="button">-->
     </form>
