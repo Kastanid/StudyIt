@@ -1,10 +1,14 @@
 import {HttpClient, json} from 'aurelia-fetch-client';
 import {Arvustus} from './arvustus';
+import {inject} from 'aurelia-framework';
+import {ValitudÕppeaine} from './valitudÕppeaine';
 
+
+@inject(ValitudÕppeaine)
 export class arvustused {
   reviews = [];
-  constructor(){
-
+  constructor(ValitudÕppeaine){
+    console.log(ValitudÕppeaine.aine);
   }
   activate(){
     let client = new HttpClient();

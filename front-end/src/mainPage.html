@@ -5,13 +5,13 @@
     <h1 id="mainText">Otsi enda õppeaine kohta arvustusi!</h1>
     <form >
       <p id="insertSubjectText">Sisesta soovitud õppeaine nimi või kood: </p>
-      <input type="text" required="required" id="searching" list="datalist1" autocomplete="off"><br>
+      <input type="text" required="required" id="searching" list="datalist1" value.bind="valitudAine"  autocomplete="off"><br>
       <datalist id="datalist1" repeat.for="review of reviews">
         <option value.bind="reviews[0]">
         <option value.bind="reviews[1]">
         <option value.bind="reviews[2]">
       </datalist>
-      <a type="submit" class="btn btn-default btn-lg" id="button" route-href="route: arvustused">OTSI</a><br><br>
+      <a type="submit" class="btn btn-default btn-lg" id="button" route-href="route: arvustused" >OTSI</a><br><br>
       <!--<input type="submit" value="OTSI" class="btn btn-default btn-lg" id="button">-->
     </form>
     <p id="sloganText">Semestri algus? Vaja koostada õppekava?</p>
