@@ -15,8 +15,8 @@ public class ReviewsController {
     public Reviews reviews() {
         Reviews rev = new Reviews();
         rev.addReview(new Review("Tarkvaratehnika", "Jube Palju teha"));
-        rev.addReview(new Review("Diskmat", "Jube"));
-        rev.addReview(new Review("Süteemianalüüs", "Mjda?"));
+        rev.addReview(new Review("Diskreetnematemaatika", "Mulle sobis"));
+        rev.addReview(new Review("Süteemianalüüs", "Milleks?"));
         return rev;
     }
 }

@@ -15,7 +15,6 @@ export class arvustused {
     })
       .then(response => response.json())
       .then(data => {
-
       console.log(data);
         for(var x in data){
           var i = 0;
@@ -30,13 +29,9 @@ export class arvustused {
             this.reviews.push(new Arvustus(arrayData[0], arrayData[1]));
             i++;
           }
-
-
         }
         console.log(this.reviews);
       });
-
-
     console.log("Toimis");
   }
 }

@@ -2,10 +2,13 @@ import {HttpClient, json} from 'aurelia-fetch-client';
 import {Arvustus} from './arvustus';
 
 export class mainPage {
-  constrictor(){
+  reviews = [];
 
+  constrictor(){
+    console.log();
   }
-  searchbox(){
+
+  activate(){
     let client = new HttpClient();
 
     client.fetch("http://localhost:8080/reviews", {
