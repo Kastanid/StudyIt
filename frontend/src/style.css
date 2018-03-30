@@ -74,7 +74,7 @@ input[type="text"]{
 }
 
 .collapsible {
-    width: 440px;
+    width: 550px;
     background-color: transparent;
     cursor: pointer;
     padding: 8px;
@@ -102,6 +102,8 @@ input[type="text"]{
 
 .contentBody {
 	text-align: center;
+	font-size: 20px;
+	margin: 0px 50px 25px 50px;
 }
 
 .arvustus {
@@ -190,3 +192,7 @@ input[type="text"]{
     border-bottom: black solid 1px;
     margin-bottom: 20px;
 }
+
+ .heading{
+    margin-bottom: 50px;
+ }
