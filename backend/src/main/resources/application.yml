@@ -1,0 +1,8 @@
+spring:
+   datasource:
+      url: jdbc:mariadb://localhost:3306/Kastanid
+      username: root
+      password: Tarkvara58
+   jpa:
+      hibernate:
+         ddl-auto: update
