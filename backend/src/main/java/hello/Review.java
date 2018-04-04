@@ -19,8 +19,9 @@ public class Review {
     @Id
     @GeneratedValue
     int id;
-    String box;
-    String rating;
+    String aineNimetus;
+    String aineKood;
+    String aineArvustus;
+    String aineSoovitus;
     int score;
-    String reviewBox;
 }

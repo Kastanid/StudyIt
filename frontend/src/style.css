@@ -121,6 +121,10 @@ input[type="text"]{
   padding: 15px;
 }
 
+.arvustuseLisamiseVäli {
+  padding: 10px;
+}
+
 #mainText{
     margin: 30px 16px;
     font-size: 44px;

@@ -1,25 +1,18 @@
 import {HttpClient, json} from 'aurelia-fetch-client';
 import {Arvustus} from './arvustus';
 import {inject} from 'aurelia-framework';
-import {ValitudÕppeaine} from './valitudÕppeaine';
 
 
-@inject(ValitudÕppeaine)
 export class mainPage {
   reviews = [];
-  valitudAine = "";
 
-  constructor(ValitudÕppeaine){
-    console.log(ValitudÕppeaine.aine);
+  clearSearch(){
+      document.getElementById("searching").value = ""
   }
-
-  /*
-  setValitudAine(ValitudÕppeaine){
-    ValitudÕppeaine.aine = this.valitudAine;
-  }
-  */
 
   activate(){
+    //var i = document.getElementById("valitudAine").value;
+    //console.log(i);
     let client = new HttpClient();
 
     client.fetch("http://localhost:8080/reviews", {
@@ -28,23 +21,9 @@ export class mainPage {
     })
       .then(response => response.json())
       .then(data => {
-
       console.log(data);
         for(var x in data){
-          var i = 0;
-          console.log(data[x].length);
-          while(i < data[x].length){
-            var arrayItem = data[x][i];
-            console.log(arrayItem);
-            var arrayData = [];
-            for(var y in arrayItem){
-              arrayData.push(arrayItem[y]);
-            }
-            this.reviews.push(arrayData[0]);
-            i++;
-          }
-
-
+          this.reviews.push(data[x].aineNimetus);
         }
         console.log(this.reviews);
       });

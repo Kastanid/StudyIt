@@ -2,11 +2,13 @@
   <require from="bootstrap/css/bootstrap.css"></require>
   <require from="./style.css"></require>
   <ul id="list">
-    <li repeat.for="review of reviewList">
+    <li repeat.for="review of reviews">
       <div class="arvustus">
-        <div class="arvustusePais"><h3>${review.box}</h3></div>
-        <div class="arvustuseTekst">${review.rating}</div>
-        <div class="arvustuseTekst">${review.reviewBox}</div>
+        <div class="arvustusePais"><h3>${review.aineNimetus} (${review.aineKood})</h3></div>
+        <div class="arvustuseTekst">
+          <div><b>Arvustus</b>: ${review.aineArvustus}</div>
+          <div><b>Soovitused</b>: ${review.aineSoovitus}</div>
+        </div>
       </div>
     </li>
   </ul>

@@ -1,18 +1,15 @@
 import {HttpClient, json} from 'aurelia-fetch-client';
 import {Arvustus} from './arvustus';
 import {inject} from 'aurelia-framework';
-import {ValitudÕppeaine} from './valitudÕppeaine';
 
-
-@inject(ValitudÕppeaine)
 export class arvustused {
   reviews = [];
-  constructor(ValitudÕppeaine){
-    console.log(ValitudÕppeaine.aine);
-  }
-  activate(){
-    let client = new HttpClient();
+  valitudAine = "";
 
+  activate(){
+    if(document.getElementById("valitudAine")!= null) this.valitudAine = document.getElementById("valitudAine").value;
+    console.log(this.valitudAine);
+    let client = new HttpClient();
     client.fetch("http://localhost:8080/reviews", {
       'method':'POST',
       'body': json(this.reviews)
@@ -21,21 +18,13 @@ export class arvustused {
       .then(data => {
       console.log(data);
         for(var x in data){
-          var i = 0;
-          console.log(data[x].length);
-          while(i < data[x].length){
-            var arrayItem = data[x][i];
-            console.log(arrayItem);
-            var arrayData = [];
-            for(var y in arrayItem){
-              arrayData.push(arrayItem[y]);
-            }
-            this.reviews.push(new Arvustus(arrayData[0], arrayData[1]));
-            i++;
+          console.log(this.valitudAine);
+          if(data[x].aineNimetus.includes(this.valitudAine)){
+            this.reviews.push(new Arvustus(data[x].aineNimetus, data[x].aineKood, data[x].aineArvustus, data[x].aineSoovitus));
+            console.log(this.reviews);
           }
         }
-        console.log(this.reviews);
       });
-    console.log("Toimis");
+      console.log(this.reviews);
   }
 }

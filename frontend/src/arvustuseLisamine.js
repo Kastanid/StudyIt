@@ -1,6 +1,6 @@
 import {HttpClient, json} from 'aurelia-fetch-client'
 
-export class arvutuseVorm{
+export class arvustuseLisamine{
 
 	reviewData = {}
 	reviewList = []
@@ -23,7 +23,7 @@ export class arvutuseVorm{
 		})
 			.then(response => response.json())
 			.then(data => {
-				console.log("Server saatis " + data.box);
+				console.log("Server saatis midagi");
 		});
 
 		console.log("Method executed!")
