@@ -5,30 +5,43 @@
   <div class="contentBody">
     <div class="grid-container">
       <div class="grid-item" id="aine">Tarkvaratehnika IDK0071 (Martin Rebane)</div>
-      <div class="grid-item">Teadmiste kontroll:
-        <input type="text" placeholder="Kuidas kujunes lõpphinne" id="box">
-      </div>
-      <br>
-      <div class="grid-item">Minu tulemus:
-        <input type="radio" name="score" value="MA"> MA
-        <input type="radio" name="score" value="1"> 1
-        <input type="radio" name="score" value="2"> 2
-        <input type="radio" name="score" value="3"> 3
-        <input type="radio" name="score" value="4"> 4
-        <input type="radio" name="score" value="5"> 5
-        <input type="radio" name="score" value="A"> A
-      </div>
-      <br>
-      <div class="grid-item">Läbitavus:
-        <input type="text" placeholder="Kuidas hindad aine raskust" id="rating">
-      </div>
-      <br>
-      <div class="grid-item">
-        <input type="text" id="reviewBox">
-      </div>
-      <div class="grid-item">
-        <input type="submit" value="SALVESTA" class="btn btn-default btn-lg" id="save"><br>
-      </div>
+      <form id="reviewForm" submit.delegate="addReview()">
+        <div class="grid-item">Teadmiste kontroll:
+          <input type="text" placeholder="Kuidas kujunes lõpphinne" id=="title" name ="box" value.bind="reviewData.box">
+        </div>
+        <br>
+        <!--
+        <div class="grid-item">Minu tulemus:
+          <input type="radio" name="score" id="scoreMa" value="MA" name="ma" value.bind="reviewData.ma"> MA
+          <input type="radio" name="score" id="scoreOne" value="1" name="one" value.bind="reviewData.one"> 1
+          <input type="radio" name="score" id="scoreTwo" value="2" name="two" value.bind="reviewData.two"> 2
+          <input type="radio" name="score" id="scoreThree" value="3" name="three" value.bind="reviewData.three"> 3
+          <input type="radio" name="score" id="scoreFour" value="4" name="four" value.bind="reviewData.four"> 4
+          <input type="radio" name="score" id="scoreFive" value="5" name="five" value.bind="reviewData.five"> 5
+          <input type="radio" name="score" id="scoreA" value="A" name="arvestatud" value.bind="reviewData.arvestatud"> A
+        </div>
+        -->
+        <br>
+        <div class="grid-item">Läbitavus:
+          <input type="text" placeholder="Kuidas hindad aine raskust" name="rating" id=="rating" value.bind="reviewData.rating">
+        </div>
+        <br>
+        <div class="grid-item">
+          <input type="text" id=="reviewBox" name="reviewBox" value.bind="reviewData.reviewBox">
+        </div>
+        <div class="grid-item">
+          <input type="submit" value="SALVESTA" class="btn btn-default btn-lg" id="save"><br>
+        </div>
+      </form>
+      <ul id="list">
+        <li repeat.for="review of reviewList">
+          <div class="arvustus">
+            <div class="arvustusePais"><h3>${review.box}</h3></div>
+            <div class="arvustuseTekst">${review.rating}</div>
+            <div class="arvustuseTekst">${review.reviewBox}</div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
