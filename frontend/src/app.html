@@ -1,7 +1,6 @@
 <template>
   <require from="bootstrap/css/bootstrap.css"></require>
   <require from="./style.css"></require>
-  <body >
     <div class="container-fluid">
       <div class="head">
         <h1>Arvustused</h1>
@@ -15,7 +14,7 @@
             <li><a route-href="route: arvustuseLisamine">Arvustuse Lisamine</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registreeru</a></li>
+            <li><a route-href="route: registreeru"><span class="glyphicon glyphicon-user"></span> Registreeru</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logi sisse</a></li>
           </ul>
         </div>
@@ -23,5 +22,4 @@
       <input style="display:none;" id="valitudAine" value.bind="valitudAine">
       <router-view></router-view>
     </div>
-  </body>
 </template>
