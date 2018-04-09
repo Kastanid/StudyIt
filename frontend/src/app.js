@@ -8,7 +8,8 @@ export class App {
       { route: '/kontaktid',     moduleId: 'kontaktid', name:'kontaktid' },
       { route: '/arvustuseLisamine', moduleId: 'arvustuseLisamine', name:'arvustuseLisamine' },
       { route: '/arvustused', moduleId: 'arvustused', name:'arvustused' },
-      { route: '/registreeru', moduleId: 'registreeru', name:'registreeru' }
+      { route: '/registreeru', moduleId: 'registreeru', name:'registreeru' },
+      { route: '/login', moduleId: 'login', name:'login' }
     ]);
     this.router = router;
   }
