@@ -4,10 +4,10 @@
   <ul id="list">
     <li repeat.for="review of reviews">
       <div class="arvustus">
-        <div class="arvustusePais"><h3>${review.aineNimetus} (${review.aineKood})</h3></div>
+        <div class="arvustusePais"><h3><b>${review.aineNimetus} (${review.aineKood})</b></h3></div>
         <div class="arvustuseTekst">
-          <div><b>Arvustus</b>: ${review.aineArvustus}</div>
-          <div><b>Soovitused</b>: ${review.aineSoovitus}</div>
+          <div><b>Arvustus</b>: <br> ${review.aineArvustus}</div><br>
+          <div><b>Soovitused</b>: <br> ${review.aineSoovitus}</div>
         </div>
       </div>
     </li>
