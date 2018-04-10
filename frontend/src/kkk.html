@@ -3,31 +3,36 @@
   <require from="./style.css"></require>
   <div class="contentBody">
     <div class="grid-container">
-      <div class="grid-item" id="aine">Korduma Kippuma Küsimused</div>
-    <button type="button" class="collapsible" data-toggle="collapse" data-target="#kkkText">Kellele ja milleks on see leht vajalik?</button>
-    <div id="kkkText" class="collapse">
-      See leht on mõeldud tudengitele, kes tahavad infot saada neid eesootavatest ainetest ja õppejõududest.
-    </div>
-    </div>
-  </div>
-  <div class="contentBody">
-    <button type="button" class="collapsible" data-toggle="collapse" data-target="#kkkText1">Kas ma saan ka ise tagasisidet kirjutada?</button>
-    <div id="kkkText1" class="collapse">
-      Jah, registreeritud kasutajad saavad kirjutada arvustusi õppeainete kohta.
-    </div>
-  </div>
-  <div class="contentBody">
-    <button type="button" class="collapsible" data-toggle="collapse" data-target="#kkkText2">Kas mu nimi ilmub arvustuse kõrvale ja kõik näevad kes arvustuse kirjutas?</button>
-    <div id="kkkText2" class="collapse">
-      Ei, teised kasutajad ei näe, kes arvustuse lisas. Sisselogimine on vajalik sellepärast, et kui kellelgi tekib küsimus või mõte Teie arvustuse kohta,
-      kirjutab ta kommentaari Teie arvustuse alla ning Teile saabub meilile teade. Kommentaarile saate samuti vastata anonüümselt.
-    </div>
-  </div>
-  <div class="contentBody">
-    <button type="button" class="collapsible" data-toggle="collapse" data-target="#kkkText3">Mida mina saan sellest kui ma kirjutan arvustuse?</button>
-    <div id="kkkText3" class="collapse">
-      Te saate teisi tudengeid väga palju aidata, kui leiate meie lehelt kasulikku infot mingi aine või õppejõu kohta on tore ju ka teistele jagada
-      enda kogemusi ja aidata neil teha õigeid valikuid.
+      <div class="grid-item" id="aine">Korduma Kippuvad Küsimused</div>
+      <form>
+        <div class="kkk row">
+          <button type="button" class="collapsible" data-toggle="collapse" data-target="#kkkText">Kellele ja milleks on see leht vajalik?</button>
+          <div id="kkkText" class="collapse">
+            See leht on mõeldud tudengitele, kes tahavad infot saada neid eesootavatest ainetest ja õppejõududest.
+          </div>
+        </div>
+        <div class="kkk row">
+          <button type="button" class="collapsible" data-toggle="collapse" data-target="#kkkText1">Kas ma saan ka ise tagasisidet kirjutada?</button>
+          <div id="kkkText1" class="collapse">
+            Jah, registreeritud kasutajad saavad kirjutada arvustusi õppeainete kohta.
+          </div>
+        </div>
+        <div class="kkk row">
+          <button type="button" class="collapsible" data-toggle="collapse" data-target="#kkkText2">Kas mu nimi ilmub arvustuse kõrvale ja kõik näevad kes arvustuse kirjutas?</button>
+          <div id="kkkText2" class="collapse">
+            Ei, teised kasutajad ei näe, kes arvustuse lisas. Sisselogimine on vajalik sellepärast, et kui kellelgi tekib küsimus või mõte Teie arvustuse kohta,
+            kirjutab ta kommentaari Teie arvustuse alla ning Teile saabub meilile teade. Kommentaarile saate samuti vastata anonüümselt.
+          </div>
+        </div>
+        <div class="kkk row">
+          <button type="button" class="collapsible" data-toggle="collapse" data-target="#kkkText3">Mida mina saan sellest kui ma kirjutan arvustuse?</button>
+          <div id="kkkText3" class="collapse">
+            Te saate teisi tudengeid väga palju aidata, kui leiate meie lehelt kasulikku infot mingi aine või õppejõu kohta on tore ju ka teistele jagada
+            enda kogemusi ja aidata neil teha õigeid valikuid.
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </template>
+
