@@ -1,26 +1,25 @@
 <template>
   <require from="bootstrap/css/bootstrap.css"></require>
   <require from="./style.css"></require>
-
+  <div class="grid-item" id="pageTitle">Lisa siia oma arvustus</div>
   <div class="contentBody">
     <div class="grid-container">
-      <div class="grid-item" id="aine">Lisa siia oma arvustus</div>
       <form id="reviewForm" submit.delegate="addReview()">
         <div class="arvustuseLisamiseVäli row">
           <div class="col-sm-4">Aine nimetus: </div>
-          <div class="col-sm-8"><input type="text" placeholder="Kirjuta..." name ="aineNimetus" value.bind="reviewData.aineNimetus"></div>
+          <div class="col-sm-8"><input type="text" placeholder="Aine nimetus" name ="aineNimetus" value.bind="reviewData.aineNimetus"></div>
         </div>
           <div class="arvustuseLisamiseVäli row">
             <div class="col-sm-4">Aine kood: </div>
-            <div class="col-sm-6"><input type="text" placeholder="Kirjuta..." name ="aineKood" value.bind="reviewData.aineKood"></div>
+            <div class="col-sm-6"><input type="text" placeholder="Kood" name ="aineKood" value.bind="reviewData.aineKood"></div>
           </div>
           <div class="arvustuseLisamiseVäli row">
             <div class="col-sm-4">Arvustus: </div>
-            <div class="col-sm-8"><textarea type="text" placeholder="Kirjuta..." name ="aineArvustus" value.bind="reviewData.aineArvustus"></textarea></div>
+            <div class="col-sm-8"><textarea type="text" placeholder="Kirjuta..." class="arvustuseVali" name="aineArvustus" value.bind="reviewData.aineArvustus"></textarea></div>
           </div>
           <div class="arvustuseLisamiseVäli row">
             <div class="col-sm-4">Soovitused: </div>
-            <div class="col-sm-8"><input type="text" placeholder="Kirjuta..." name ="aineSoovitus" value.bind="reviewData.aineSoovitus"></div>
+            <div class="col-sm-8"><input type="text" placeholder="Soovitan..." name ="aineSoovitus" value.bind="reviewData.aineSoovitus"></div>
           </div>
         <br>
         <!--

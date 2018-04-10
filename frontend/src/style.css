@@ -221,7 +221,19 @@ input[type="text"]{
 #register:hover{
     background-color: #4988ed;
 }
-#usrnm {
-  width: 261px;
-  height: 34px;
+#pageTitle {
+font-family: bold;
+    font-size: 38px;
+    text-align: center;
+    border-bottom: black solid 1px;
+    margin-bottom: 20px;
+}
+.collapse {
+max-width: auto;
+margin: auto;
+}
+.arvustuseVali{
+min-width: 300px;
+height: auto;
+min-height:100px;
 }
