@@ -216,3 +216,7 @@ input[type="text"]{
 #register:hover{
     background-color: #4988ed;
 }
+#usrnm {
+  width: 261px;
+  height: 34px;
+}
