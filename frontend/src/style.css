@@ -51,7 +51,6 @@ input[type="text"]{
     background-image: url(/src/resources/images/taust.jpg);
     color: black;
     height: 110px;
-    font-weight: bold;
     display:flex; 
     vertical-align: middle;
     align-items: center;
@@ -60,8 +59,9 @@ input[type="text"]{
 }
 
 .head h1{
-    font-size: 48px;
-    border-bottom: 1px solid black; 
+    font-size: 54px;
+    font-weight: bold;
+    transform: rotate(-5deg);
 }
 
 .content {
