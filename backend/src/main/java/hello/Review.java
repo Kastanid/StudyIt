@@ -24,4 +24,16 @@ public class Review {
     String aineArvustus;
     String aineSoovitus;
     int score;
+
+    Review( String aineNimetus, String aineKood, String aineArvustus, String aineSoovitus, int score){
+        this.aineNimetus = aineNimetus;
+        this.aineKood = aineKood;
+        this.aineArvustus = aineArvustus;
+        this.aineSoovitus = aineSoovitus;
+        this.score = score;
+    }
+
+    Review(){
+
+    }
 }
