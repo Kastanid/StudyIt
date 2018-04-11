@@ -13,5 +13,4 @@ export class App {
     ]);
     this.router = router;
   }
-  valitudAine = "Palun vali õppeaine";
 }

@@ -10,9 +10,11 @@ export class mainPage {
       document.getElementById("searching").value = ""
   }
 
+  setValitudAine(){
+    document.cookie = "valitudAine=" + document.getElementById("searching").value;
+  }
+
   activate(){
-    //var i = document.getElementById("valitudAine").value;
-    //console.log(i);
     let client = new HttpClient();
 
     client.fetch("http://localhost:8080/reviews", {
@@ -23,26 +25,11 @@ export class mainPage {
       .then(data => {
       console.log(data);
         for(var x in data){
-          this.reviews.push(data[x].aineNimetus);
+          if($.inArray(data[x].aineNimetus, this.reviews) == -1) {
+            this.reviews.push(data[x].aineNimetus);
+          }
         }
         console.log(this.reviews);
       });
-
-  /*function searchInput() {
-      var input, filter, ul, li, arvustus, i;
-      input = document.getElementById('searching');
-      filter = input.value.toUpperCase();
-      ul = document.getElementById("list");
-      li = ul.getElementsByTagName('li');
-
-      for (i = 0; i < li.length; i++) {
-          arvustus = li[i].getElementByClassName("arvustus")[0];
-          if (arvustus.innerHTML.toUpperCase().indexOf(filter) > -1) {
-              li[i].style.display = "";
-          } else {
-              li[i].style.display = "none";
-          }
-      }
-  }*/
  }
 }

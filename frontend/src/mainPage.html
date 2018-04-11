@@ -5,7 +5,7 @@
     <h1 id="mainText">Otsi enda õppeaine kohta arvustusi!</h1>
     <form >
       <p id="insertSubjectText">Sisesta soovitud õppeaine nimi või kood: </p>
-      <input type="text" required="required" value.two-way="valitudAine" id="searching" list="datalist1" focus.trigger="clearSearch()" autocomplete="off">
+      <input type="text" required="required" id="searching" list="datalist1" blur.trigger="setValitudAine()" focus.trigger="clearSearch()" autocomplete="off">
       <datalist id="datalist1">
         <option  repeat.for="review of reviews">${review}</option>
       </datalist>

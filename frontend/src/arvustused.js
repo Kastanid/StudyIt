@@ -7,7 +7,7 @@ export class arvustused {
   valitudAine = "";
 
   activate(){
-    if(document.getElementById("valitudAine")!= null) this.valitudAine = document.getElementById("valitudAine").value;
+    this.valitudAine = document.cookie.split("=")[1];
     console.log(this.valitudAine);
     let client = new HttpClient();
     client.fetch("http://localhost:8080/reviews", {
@@ -16,7 +16,6 @@ export class arvustused {
     })
       .then(response => response.json())
       .then(data => {
-      console.log(data);
         for(var x in data){
           console.log(this.valitudAine);
           if(data[x].aineNimetus.includes(this.valitudAine)){
