@@ -21,6 +21,11 @@ input[type="text"]{
     font-size: 24px;
 }
 
+input:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
 .navbar{
     background-color: #8E8D8A;
     padding: 25px 25px 0 0;
@@ -176,14 +181,6 @@ input[type="text"]{
     font-size: 26px;
 }
 
-#button{
-    color: white;
-    background-color: #E85A4F;
-    margin: 5px;
-    width: 250px;
-    margin-top: 15px;
-}
-
 #searching{
     width: 480px;
     height: 40px;
@@ -191,20 +188,16 @@ input[type="text"]{
     font-family: 'Montserrat', sans-serif;
 }
 
-#button:hover{
-    background-color: #4988ed;
-}
-
-#save{
+.btn-default{
     color: white;
-    background-color: #52658F;
+    background-color: #E85A4F;
     margin: 5px;
     width: 250px;
     margin-top: 15px;
 }
 
-#save:hover{
-    background-color: #4988ed;
+.btn-default:hover{
+    background-color: #E85A4F;
 }
 
 #aine{
@@ -257,4 +250,9 @@ input[type="text"]{
 #loginBtns {
   padding: 0px 15px;
   margin: 10px 10px;
+}
+
+#searching {
+  height: 50px;
+  border-radius: 10px;
 }
