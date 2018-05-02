@@ -3,20 +3,25 @@
   <require from="./style.css"></require>
   <body>
     <div class="container-fluid">
-      <div class="head">
+      <!--<div class="head">
         <h1>StudyIt</h1>
       </div>
+      -->
       <nav class="navbar navbar-static-top">
+        <a class="navbar-brand" route-href="route: mainPage">StudyIt</a>
         <div class="container-fluid">
           <ul class="nav navbar-nav">
-            <li><a route-href="route: mainPage">Pealeht</a></li>
-            <li><a route-href="route: kkk">KKK</a></li>
-            <li><a route-href="route: kontaktid">Kontakt</a></li>
-            <li><a route-href="route: arvustuseLisamine">Arvustuse Lisamine</a></li>
+            <li><div class="shadow"><a route-href="route: mainPage">Pealeht</a></div></li>
+            <li><div class="shadow"><a route-href="route: kkk">KKK</a></div></li>
+          </ul>
+          <img src="src/resources/images/logo.png" alt="">
+          <ul class="nav navbar-nav">
+            <li><div class="shadow"><a route-href="route: kontaktid">Kontakt</a></div></li>
+            <li><div class="shadow"><a route-href="route: arvustuseLisamine">Lisa uus</a></div></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a route-href="route: registreeru"><span class="glyphicon glyphicon-user"></span> Registreeru</a></li>
-            <li><a route-href="route: login"><span class="glyphicon glyphicon-log-in"></span> Logi sisse</a></li>
+            <li><div class="shadow" id="loginBtns"><a route-href="route: registreeru"><span class="glyphicon glyphicon-user"></span></a></div></li>
+            <li><div class="shadow" id="loginBtns"><a route-href="route: login"><span class="glyphicon glyphicon-log-in"></span></a></div></li>
           </ul>
         </div>
       </nav>
