@@ -1,34 +1,32 @@
 import {HttpClient, json} from 'aurelia-fetch-client'
 import {inject} from 'aurelia-framework';
-export class login{
+export class login {
 
-  users = [{"username":"da",
-           "email":"dasdasd",
-           "password":"asd"}]
-	userData = {}
-	userList = []
+      users = {}
+    	userData = {}
+    	userList = []
 
-	activate() {
-		let client = new HttpClient();
-		client.fetch('http://localhost:8080/users')
-			.then(response => response.json())
-			.then(users => this.userList = users);
-			console.log("Get method executed11!")
-	}
+   getUser() {
+     let client = new HttpClient();
+         client.fetch("http://localhost:8080/users", {
+           'method':'POST',
+           'body': json(this.users)
+         })
+           .then(response => response.json())
+           .then(data => {
+             for(var x in data){
+             console.log(data);
+               if(data[x].username == (this.userData.username)
+               && data[x].password == (this.userData.password)
+               && this.userData.username != "" && this.userData.password != "")
+               {
+               document.cookie = "user=" + document.getElementById("username").value;
+               console.log(document.cookie);
+                console.log("Tere");
+                console.log(this.userData.username);
+               }
+             }
+           });
 
-	addUser() {
-	  this.activate();
-		let client = new HttpClient();
-
-		client.fetch('http://localhost:8080/users/add', {
-			'method': "POST",
-			'body': json(this.userData)
-		})
-			.then(response => response.json())
-			.then(data => {
-				console.log("Server saatis midagi2");
-		});
-
-		console.log("Method executed123!")
-	}
+  }
 }

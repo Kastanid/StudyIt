@@ -8,7 +8,7 @@ export class App {
       { route: '/kontaktid',     moduleId: 'kontaktid', name:'kontaktid' },
       { route: '/arvustuseLisamine', moduleId: 'arvustuseLisamine', name:'arvustuseLisamine' },
       { route: '/arvustused', moduleId: 'arvustused', name:'arvustused' },
-      { route: '/registreeru', moduleId: 'registreeru', name:'registreeru' },
+      { route: '/registreeri', moduleId: 'registreeri', name:'registreeri' },
       { route: '/login', moduleId: 'login', name:'login' }
     ]);
     this.router = router;
