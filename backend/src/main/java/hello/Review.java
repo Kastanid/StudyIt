@@ -5,6 +5,7 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Getter
@@ -13,10 +14,15 @@ public class Review {
     @Id
     @GeneratedValue
     int id;
+    @NotNull
     String aineNimetus;
+    @NotNull
     String aineKood;
+    @NotNull
     String aineArvustus;
+    @NotNull
     String aineSoovitus;
+    @NotNull
     int score;
 
     Review( String aineNimetus, String aineKood, String aineArvustus, String aineSoovitus, int score){

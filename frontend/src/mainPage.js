@@ -1,5 +1,6 @@
 import {HttpClient, json} from 'aurelia-fetch-client';
 import {Arvustus} from './arvustus';
+import {User} from './user';
 import {inject} from 'aurelia-framework';
 
 
@@ -31,20 +32,5 @@ export class mainPage {
         }
         console.log(this.reviews);
       });
-  }
-  checkInput() {
-    var value = document.getElementById("searching").value;
-    if(value == ""){
-      alert("Palun sisesta otsitav õppeaine.");
-      return false;
-    }
-    else if(!this.reviews.includes(value)) {
-      alert("Sellist ainet pole olemas");
-      return false;
-    }
-    else return true;
-   }
+ }
 }
-
-
-

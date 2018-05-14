@@ -13,4 +13,26 @@ export class App {
     ]);
     this.router = router;
   }
+
+  attached() {
+    var cookieList = document.cookie.split(";");
+    console.log(cookieList);
+    for(var i = 0; i < cookieList.length; i++) {
+      if(cookieList[i].includes("user") && cookieList[i].split("=")[1] == "") {
+        document.getElementById("logOutButton").style.display = "none";
+      }
+    }
+  }
+
+  funks() {
+    var cookieList = document.cookie.split(";");
+    console.log(cookieList);
+        for(var i = 0; i < cookieList.length; i++) {
+          if(cookieList[i].includes("user")) {
+            document.cookie = "user="
+            document.getElementById("logOutButton").style.display = "none";
+          }
+        }
+
+  }
 }
