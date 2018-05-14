@@ -1,0 +1,15 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="./style.css"></require>
+  <ul id="list">
+    <li repeat.for="user of users">
+      <div class="user">
+        <div class="arvustusePais"><h3>${user.email}</h3></div>
+        <div class="arvustuseTekst">
+          <div><b>username</b>: ${user.username}</div>
+          <div><b>pass</b>: ${user.password}</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</template>
