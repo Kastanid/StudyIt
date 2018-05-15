@@ -14,22 +14,31 @@ export class arvustuseLisamine{
 	}
 
 	addReview() {
+	  var cookieList = document.cookie.split(";");
+    for(var i = 0; i < cookieList.length; i++) {
+      if(cookieList[i].includes("user")) {
+        if(cookieList[i].split("=")[1] != "") {
+          this.reviewData.aineNimetus = trimAndToUpperCase(this.reviewData.aineNimetus);
+          this.reviewData.aineKood = this.reviewData.aineKood.replace(/\s/g, '');
+          this.reviewData.aineArvustus = this.reviewData.aineArvustus.trim();
+          this.reviewData.aineSoovitus = this.reviewData.aineSoovitus.trim();
 
-	  this.reviewData.aineNimetus = trimAndToUpperCase(this.reviewData.aineNimetus);
-    this.reviewData.aineKood = this.reviewData.aineKood.replace(/\s/g, '');
-    this.reviewData.aineArvustus = this.reviewData.aineArvustus.trim();
-    this.reviewData.aineSoovitus = this.reviewData.aineSoovitus.trim();
+          this.activate();
+          let client = new HttpClient();
+          client.fetch('http://localhost:8080/reviews/add', {
+            'method': "POST",
+            'body': json(this.reviewData)
+          })
+            .then(response => response.json())
+            .then(data => {
+              alert("Edukalt lisatud!");
+          });
+        }
+        else alert("Arvustuse Lisamiseks logi palun sisse!");
+      }
+    }
 
-	  this.activate();
-		let client = new HttpClient();
-		client.fetch('http://localhost:8080/reviews/add', {
-			'method': "POST",
-			'body': json(this.reviewData)
-		})
-			.then(response => response.json())
-			.then(data => {
-				alert("Edukalt lisatud!");
-		});
+
 	}
 }
 
