@@ -9,13 +9,13 @@
       <nav class="navbar navbar-static-top">
         <div class="container-fluid">
           <ul class="nav navbar-nav">
-            <li><a route-href="route: mainPage">Pealeht</a></li>
-            <li><a route-href="route: kkk">KKK</a></li>
-            <li><a route-href="route: kontaktid">Kontakt</a></li>
-            <li><a route-href="route: arvustuseLisamine">Arvustuse Lisamine</a></li>
+            <li><a route-href="route: mainPage" click.delegate="setCurrentPage('mainPage')">Pealeht</a></li>
+            <li><a route-href="route: kkk" click.delegate="setCurrentPage('kkk')">KKK</a></li>
+            <li><a route-href="route: kontaktid" click.delegate="setCurrentPage('kontaktid')">Kontakt</a></li>
+            <li><a route-href="route: arvustuseLisamine" click.delegate="setCurrentPage('arvustuseLisamine')">Arvustuse Lisamine</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a click.delegate="hideLogoutButton()" id="logOutButton" style="display: none;"><span class="glyphicon glyphicon-log-out"></span> Logi välja</a></li>
+            <li><a click.delegate="logOut()" id="logOutButton" style="display: none;"><span class="glyphicon glyphicon-log-out"></span> Logi välja</a></li>
             <li><a route-href="route: registreeri" id="registerButton"><span class="glyphicon glyphicon-user"></span> Registreeru</a></li>
             <li><a route-href="route: login" id="loginButton"><span class="glyphicon glyphicon-log-in"></span> Logi sisse</a></li>
           </ul>

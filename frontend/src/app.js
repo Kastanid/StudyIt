@@ -1,4 +1,6 @@
 export class App {
+  currentPage = "mainPage";
+
   configureRouter(config, router){
     config.title = 'StudyIt';
     config.map([
@@ -14,7 +16,7 @@ export class App {
     this.router = router;
   }
 
-  hideLogoutButton() {
+  logOut() {
     var cookieList = document.cookie.split(";");
     for(var i = 0; i < cookieList.length; i++) {
       if(cookieList[i].includes("user")) {
@@ -24,6 +26,11 @@ export class App {
         document.getElementById("logOutButton").style.display = "none";
       }
     }
+    this.router.navigate("mainPage");
+  }
 
+  setCurrentPage(x){
+    this.currentPage = x;
+    return true;
   }
 }
