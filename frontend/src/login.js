@@ -20,10 +20,11 @@ export class login {
                && data[x].password == (this.userData.password)
                && this.userData.username != "" && this.userData.password != "")
                {
-               document.cookie = "user=" + document.getElementById("username").value;
-               console.log(document.cookie);
-                console.log("Tere");
-                console.log(this.userData.username);
+                document.cookie = "user=" + document.getElementById("username").value;
+                document.getElementById("logOutButton").style.display = "inline-block";
+                document.getElementById("registerButton").style.display = "none";
+                document.getElementById("loginButton").style.display = "none";
+                return true;
                }
              }
            });

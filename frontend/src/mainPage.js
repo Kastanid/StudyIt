@@ -12,7 +12,19 @@ export class mainPage {
   }
 
   setValitudAine(){
-    document.cookie = "valitudAine=" + document.getElementById("searching").value;
+    var value = document.getElementById("searching").value;
+    if(value == ""){
+      alert("Palun sisesta otsitav õppeaine.");
+      return false;
+    }
+    else if(!this.reviews.includes(value.toUpperCase())) {
+      alert("Sellist ainet pole olemas");
+      return false;
+    }
+    else {
+      document.cookie = "valitudAine=" + value.toUpperCase();
+      return true;
+    };
   }
 
   activate(){

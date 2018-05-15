@@ -14,18 +14,28 @@ export class arvustuseLisamine{
 	}
 
 	addReview() {
+
+	  this.reviewData.aineNimetus = trimAndToUpperCase(this.reviewData.aineNimetus);
+    this.reviewData.aineKood = this.reviewData.aineKood.replace(/\s/g, '');
+    this.reviewData.aineArvustus = this.reviewData.aineArvustus.trim();
+    this.reviewData.aineSoovitus = this.reviewData.aineSoovitus.trim();
+
+    
 	  this.activate();
 		let client = new HttpClient();
-
 		client.fetch('http://localhost:8080/reviews/add', {
 			'method': "POST",
 			'body': json(this.reviewData)
 		})
 			.then(response => response.json())
 			.then(data => {
-				console.log("Server saatis midagi");
+				alert("Edukalt lisatud!");
 		});
-
-		console.log("Method executed!")
 	}
+}
+
+function trimAndToUpperCase(str) {
+  str = $.trim(str)
+  str = str.toUpperCase();
+  return str;
 }

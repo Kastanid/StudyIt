@@ -7,7 +7,12 @@ export class arvustused {
   valitudAine = "";
 
   activate(){
-    this.valitudAine = document.cookie.split("=")[1];
+    var cookieList = document.cookie.split(";");
+    for(var i = 0; i < cookieList.length; i++) {
+      if(cookieList[i].includes("valitudAine")) {
+        this.valitudAine = cookieList[i].split("=")[1];
+      }
+    }
     console.log(this.valitudAine);
     let client = new HttpClient();
     client.fetch("http://localhost:8080/reviews", {
