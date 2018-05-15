@@ -19,7 +19,8 @@ export class App {
     for(var i = 0; i < cookieList.length; i++) {
       if(cookieList[i].includes("user")) {
         document.cookie = "user=";
-
+        document.getElementById("registerButton").style.display = "inline-block";
+        document.getElementById("loginButton").style.display = "inline-block";
         document.getElementById("logOutButton").style.display = "none";
       }
     }
