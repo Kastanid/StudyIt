@@ -10,6 +10,7 @@ export class login {
   userData = {}
   userList = []
   router
+  isUser = false;
 
   constructor(app, router){
     this.router = router;
@@ -29,14 +30,15 @@ export class login {
         && data[x].password == (this.userData.password)
         && this.userData.username != "" && this.userData.password != "")
         {
+          this.isUser = true;
           document.cookie = "user=" + document.getElementById("username").value;
           document.getElementById("logOutButton").style.display = "inline-block";
           document.getElementById("registerButton").style.display = "none";
           document.getElementById("loginButton").style.display = "none";
           this.router.navigate(this.currentPage);
         }
-        else alert("Kasutajanimi või parool on vale.");
       }
+      if(!this.isUser) alert("Kasutajanimi või parool on vale.")
     });
   }
 }

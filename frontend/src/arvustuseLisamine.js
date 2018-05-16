@@ -7,6 +7,7 @@ export class arvustuseLisamine{
   router
 	reviewData = {}
 	reviewList = []
+	hasUser = false;
 
   constructor(router){
     this.router = router;
@@ -16,11 +17,16 @@ export class arvustuseLisamine{
   var cookieList = document.cookie.split(";");
     for(var i = 0; i < cookieList.length; i++) {
       if(cookieList[i].includes("user")) {
+        this.hasUser = true;
         if(cookieList[i].split("=")[1] == "") {
           this.router.navigate("login");
           alert("Arvustuse lisamiseks pead olema sisse logitud.");
         }
       }
+    }
+    if(!this.hasUser) {
+      this.router.navigate("login");
+      alert("Arvustuse lisamiseks pead olema sisse logitud.");
     }
 		let client = new HttpClient();
 		client.fetch('http://localhost:8080/reviews')
@@ -30,6 +36,11 @@ export class arvustuseLisamine{
 	}
 
 	addReview() {
+	  if(this.reviewData.aineNimetus == "" || this.reviewData.aineKood == ""
+	    || this.reviewData.aineArvustus=="" || this.reviewData.aineSoovitus==""){
+	      alert("Kontrolli, et kõik väljad oleksid täidetud!");
+	      return false;
+	    }
 	  this.reviewData.aineNimetus = trimAndToUpperCase(this.reviewData.aineNimetus);
     this.reviewData.aineKood = this.reviewData.aineKood.replace(/\s/g, '');
     this.reviewData.aineArvustus = this.reviewData.aineArvustus.trim();
@@ -44,6 +55,7 @@ export class arvustuseLisamine{
       .then(response => response.json())
       .then(data => {
         alert("Edukalt lisatud!");
+        this.router.navigate("mainPage");
     });
 	}
 }
